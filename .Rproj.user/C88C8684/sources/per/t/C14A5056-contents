@@ -38,16 +38,33 @@ coeficiente_de_variação = 100*sd(dados$ï..Casas)/mean(dados$ï..Casas)
 #C) //GERAR GRAFICO DE FREQUENCIA 
 
 #frequencia absoluta
-plot(freq)
+png(filename='./graficos/EX02/frequencia_absoluta.png', width = 800, height = 500, pointsize = 16)
+boxplot(freq, main="Frequência absoluta de casas", ylab="Nº de casas")
+dev.off()  # usado em complemento com a funcao png (ou outras funcoes para 
+# gerar arquivos graficos)
+
 
 #frequencia relativa
-plot(p_freq_rel)
+#frequencia absoluta
+png(filename='./graficos/EX02/frequencia_relativa.png', width = 800, height = 500, pointsize = 16)
+boxplot(p_freq_rel, main="Frequência relativa de casas (%)", ylab="Nº de casas")
+dev.off()  # usado em complemento com a funcao png (ou outras funcoes para 
+# gerar arquivos graficos)
 
 
 #//GERAR FRAFICO DE POSIÇÃO
 grafico2 <- c(media,mediana,moda)
+#frequencia absoluta
+png(filename='./graficos/EX02/posicao.png', width = 800, height = 500, pointsize = 16)
 plot(grafico2, xlab = "N de Casas", ylab="Media, Mediana, Moda")
+dev.off()  # usado em complemento com a funcao png (ou outras funcoes para 
+# gerar arquivos graficos)
+
 
 #// GERAR GRAFICO DE DISPERSÃO
 grafico3 <- c(amplitude_total,variancia,desvio_padrão,coeficiente_de_variação)
+png(filename='./graficos/EX02/dispersao.png', width = 800, height = 500, pointsize = 16)
 plot(grafico3,xlab = "N de Casas", ylab="AT, VAR, SD, CV.")
+dev.off()  # usado em complemento com a funcao png (ou outras funcoes para 
+# gerar arquivos graficos)
+

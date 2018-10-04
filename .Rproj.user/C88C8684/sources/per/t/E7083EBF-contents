@@ -18,5 +18,10 @@ frequencia <- cbind(freq, p_freq_rel)
 frequencia
 
 #histograma
-
+#gerando os gráficos
+#frequencia absoluta
+png(filename='./graficos/EX04/histograma.png', width = 800, height = 500, pointsize = 16)
 hist(dados$ï..SalÃ.rios, xlab = "Salários", ylab = "Frequência")
+dev.off()  # usado em complemento com a funcao png (ou outras funcoes para 
+# gerar arquivos graficos)
+
